@@ -1,0 +1,63 @@
+.carousel {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: max-content repeat(4, auto);
+  justify-items: end;
+  padding: 8rem 6rem;
+  height: 90vh;
+  align-items: center;
+  background-color: var(--color-primary-opacity-light);
+  backdrop-filter: blur(2px);
+
+  &__arrows {
+    align-self: center;
+    font-size: 4rem;
+    font-weight: var(--fw-bold);
+    color: var(--color-primary-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    &--up,
+    &--down {
+      border: 2px solid var(--color-accent-dark);
+      border-radius: 9px;
+      padding: 0.5rem;
+      text-align: center;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .carousel {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .carousel {
+    grid-template-columns: minmax(12.6rem, max-content) repeat(2, 40%);
+    grid-template-rows: 2;
+    justify-items: center;
+    gap: 2rem 0;
+    padding: 4rem 0;
+
+    &__arrows {
+      grid-area: 1 / 1 / span 2;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .carousel {
+    grid-template-columns: minmax(8rem, max-content) repeat(2, 40%);
+
+    gap: 2rem;
+  }
+}
