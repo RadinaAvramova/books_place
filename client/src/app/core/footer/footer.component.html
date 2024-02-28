@@ -1,0 +1,46 @@
+<footer class="footer">
+    <div class="footer__bg"></div>
+    <div class="footer__img"></div>
+    <div class="footer__logo">
+        <img src="../../../assets/logo.png" alt="Footer logo" class="footer__logo--img">
+        <h4 class="subheading footer__logo--heading">Turn Ingredients into Inspiration</h4>
+    </div>
+    <nav class="footer__nav">
+        <ul class="footer__nav--list">
+            @if(!user) {
+            <li class="footer__nav--list-item"><a class="footer__nav--list-link" routerLink="/auth/login">Login</a>
+            </li>
+            <li class="footer__nav--list-item"><a class="footer__nav--list-link"
+                    routerLink="/auth/register">Register</a>
+            </li>
+            }
+            <li class="footer__nav--list-item"><a class="footer__nav--list-link" routerLink="/dashboard">Recipes</a>
+            </li>
+            <li class="footer__nav--list-item"><a class="footer__nav--list-link" routerLink="#">Personal Recipes</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="footer__copyright">
+        <div class="footer__copyright--header">
+            <h2 class="subheading footer__copyright--header-heading">Cook It</h2>
+            <a href="https://github.com/didoslavov/cook-it" target="_blank" class="footer__copyright--header-link"></a>
+        </div>
+        <p class="footer__copyright--text">Final project for Angular course in SoftUni.</p>
+        <p class="footer__copyright--text">Made with fun, using &darr;</p>
+        <div class="footer__copyright--text--icons">
+            <div class="footer__copyright--text--icons-angular"></div>
+            <div class="footer__copyright--text--icons-node"></div>
+            <div class="footer__copyright--text--icons-express"></div>
+            <div class="footer__copyright--text--icons-mysql"></div>
+            <div class="footer__copyright--text--icons-html"></div>
+            <div class="footer__copyright--text--icons-sass"></div>
+        </div>
+        <div class="footer__copyright--text-creator">Created by <a
+                href="https://www.linkedin.com/in/deyan-slavov-14648a207/" target="_blank"
+                class="footer__copyright--text-creator-name link">Deayn
+                Slavov</a>
+            &COPY;
+            <p class="footer__copyright--text-creator-year">{{year}}</p>
+        </div>
+    </div>
+</footer>

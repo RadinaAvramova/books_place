@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary-light);
+  height: 9.6rem;
+  padding: 0 1.8rem 0 4.8rem;
+  box-shadow: var(--shadow);
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.logo {
+  height: 8.2rem;
+  filter: drop-shadow(-0.2rem 0.2rem 0.2rem var(--color-primary));
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+
+  &__item {
+    &-btn {
+      font-size: 1.8rem;
+      font-weight: var(--fw-bold);
+      color: var(--color-primary-dark);
+      border: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: inherit;
+        cursor: pointer;
+        color: var(--color-accent-dark);
+      }
+    }
+
+    &-user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      background-color: var(--color-primary-light);
+      border: 1px solid var(--color-primary-dark);
+    }
+  }
+}
+
+.main-nav__mobile-button {
+  display: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-primary-dark);
+  font-weight: var(--fw-bold);
+  font-size: 1.8rem;
+
+  transition: all 300ms;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--color-accent-dark);
+}
+
+@media screen and (max-width: 1200px) {
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-nav {
+    display: none;
+
+    &__mobile-icon {
+      font-size: 4.4rem;
+      color: var(--color-primary-dark);
+    }
+
+    &__mobile-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      display: none;
+      display: block;
+      z-index: 9999;
+    }
+
+    &__mobile-overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(233, 236, 233, 0.8);
+      backdrop-filter: blur(0.8rem);
+      z-index: 1000;
+    }
+
+    &__mobile-list {
+      list-style: none;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6.4rem;
+    }
+  }
+}
