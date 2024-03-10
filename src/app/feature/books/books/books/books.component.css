@@ -1,0 +1,53 @@
+#books-container {
+    margin: 50px 50px 0 50px;
+}
+
+#books-content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 300px 300px 300px 300px;
+    column-gap: 30px;
+    justify-content: center;
+    background: #b393637c;
+    overflow: hidden;
+}
+
+#books-content-load {
+    justify-content: center;
+    background: #b393637c;
+}
+
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #000000;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1380px) {
+
+    #books-content {
+        grid-template-columns: 300px 300px 300px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    #books-content {
+        grid-template-columns: 300px 300px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+
+    #books-content {
+        grid-template-columns: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #load {
+        width: auto;
+    }
+}
