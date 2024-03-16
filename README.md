@@ -74,9 +74,3 @@ Users can rate the other users’ books based on their opinion by choosing a rat
 * Fontawesome
 
 
-
-## Application starting
-
-Application can be accessed on https://books-place-9171c.firebaseapp.com/
-
-
